@@ -6,6 +6,6 @@ int randomInt(int max) =>
 randomListElement(List list) =>
     list[randomInt(list.length - 1)];
 
-String randomColor(List colorList) =>
-    randomListElement(colorList);
+String randomColor(List<String> colors) =>
+    randomListElement(colors);
 
