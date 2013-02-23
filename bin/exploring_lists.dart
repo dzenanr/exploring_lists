@@ -10,6 +10,7 @@ part 'max.dart';
 part 'min.dart';
 part 'random.dart';
 part 'reduce.dart';
+part 'retain_all.dart';
 part 'skip.dart';
 part 'take.dart';
 part 'where.dart';
@@ -45,12 +46,12 @@ explore01() {
 
 explore02() {
   num total = sum(numbers);
-  display('Numbers Sum', numbers, [total]);
+  display('Total', numbers, [total]);
 }
 
 explore03() {
   List<num> incrementedNumbers = increment(numbers);
-  display('Numbers Increment', numbers, incrementedNumbers);
+  display('Incremented Numbers', numbers, incrementedNumbers);
 }
 
 explore04() {
@@ -93,6 +94,11 @@ explore11() {
   display('Is Any Number Decimal?', numbers, [isAnyNumberDecimal]);
 }
 
+explore12() {
+  List<num> sameDigitNumbers = retain(numbers, [222, 333, 555]);
+  display('Same Digit Numbers?', numbers, sameDigitNumbers);
+}
+
 void main() {
   display('Exploring Lists');
   explore01();
@@ -106,4 +112,5 @@ void main() {
   explore09();
   explore10();
   explore11();
+  explore12();
 }
