@@ -1,7 +1,8 @@
 part of exploring_lists;
 
-List<num> retain(List<num> list1, List<num> list2) {
-  list1.retainAll(list2);
-  return list1;
+List retain(List list1, List list2) {
+  var list = new List.from(list1);
+  list.retainAll(list2);
+  return list;
 }
 

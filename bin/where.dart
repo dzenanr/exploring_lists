@@ -1,5 +1,4 @@
 part of exploring_lists;
 
-List<num> filter(List<num> list, bool f(num n)) =>
-    (list.where(f)).toList();
+List filter(List list, bool f(e)) => list.where(f).toList();
 

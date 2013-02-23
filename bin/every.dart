@@ -1,5 +1,4 @@
 part of exploring_lists;
 
-bool every(List<num> list, bool f(num n)) =>
-    list.every(f);
+bool every(List list, bool f(e)) => list.every(f);
 

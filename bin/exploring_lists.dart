@@ -3,7 +3,9 @@ library exploring_lists;
 import 'dart:math';
 
 part 'any.dart';
+part 'contains.dart';
 part 'every.dart';
+part 'expand.dart';
 part 'join.dart';
 part 'map.dart';
 part 'max.dart';
@@ -11,7 +13,10 @@ part 'min.dart';
 part 'random.dart';
 part 'reduce.dart';
 part 'retain_all.dart';
+part 'reversed.dart';
+part 'single.dart';
 part 'skip.dart';
+part 'sort.dart';
 part 'take.dart';
 part 'where.dart';
 
@@ -99,6 +104,39 @@ explore12() {
   display('Same Digit Numbers?', numbers, sameDigitNumbers);
 }
 
+explore13() {
+  var singleElementList = [7];
+  num singleNumber = single(singleElementList);
+  display('Single Number', singleElementList, [singleNumber]);
+}
+
+explore14() {
+  List<num> reversedNumbers = reversed(numbers);
+  display('Reversed Numbers', numbers, reversedNumbers);
+}
+
+explore15() {
+  num number = 333;
+  bool containsNumber = contain(numbers, number);
+  display('Contains Number $number?', numbers, [containsNumber]);
+}
+
+explore16() {
+  List<num> neighbors(num n) {
+    var ns = new List();
+    ns.add(n - 1);
+    ns.add(n + 1);
+    return ns;
+  }
+  List<num> neighborNumbers = replace(numbers, neighbors);
+  display('Replace Numbers With Neighbor Numbers', numbers, neighborNumbers);
+}
+
+explore17() {
+  List<num> sortedNumbers = order(numbers);
+  display('Sorted Numbers', numbers, sortedNumbers);
+}
+
 void main() {
   display('Exploring Lists');
   explore01();
@@ -113,4 +151,9 @@ void main() {
   explore10();
   explore11();
   explore12();
+  explore13();
+  explore14();
+  explore15();
+  explore16();
+  explore17();
 }

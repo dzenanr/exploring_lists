@@ -1,5 +1,4 @@
 part of exploring_lists;
 
-bool any(List<num> list, bool f(num n)) =>
-    list.any(f);
+bool any(List list, bool f(e)) => list.any(f);
 

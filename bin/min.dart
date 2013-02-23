@@ -1,5 +1,4 @@
 part of exploring_lists;
 
-num min(List<num> list) =>
-    list.min((m, n) => m.compareTo(n));
+dynamic min(List list) => list.min((m, n) => m.compareTo(n));
 
