@@ -1,4 +1,9 @@
 part of exploring_lists;
 
-dynamic max(List list) => list.max((m, n) => m.compareTo(n));
+dynamic max(List list) =>
+    list.reduce((v, e) => v = v.compareTo(e) == -1 ? e : v);
+
+
+
+
 

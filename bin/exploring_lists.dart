@@ -11,8 +11,8 @@ part 'map.dart';
 part 'max.dart';
 part 'min.dart';
 part 'random.dart';
-part 'reduce.dart';
-part 'retain_all.dart';
+part 'fold.dart';
+part 'retain.dart';
 part 'reversed.dart';
 part 'single.dart';
 part 'skip.dart';
@@ -100,8 +100,8 @@ explore11() {
 }
 
 explore12() {
-  List<num> sameDigitNumbers = retain(numbers, [222, 333, 555]);
-  display('Same Digit Numbers?', numbers, sameDigitNumbers);
+  List<num> sameNumbers = retain(numbers, [222, 333, 555]);
+  display('Retain Same Numbers', numbers, sameNumbers);
 }
 
 explore13() {
