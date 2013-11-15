@@ -95,8 +95,9 @@ explore10() {
 }
 
 explore11() {
-  bool isAnyNumberDecimal = any(numbers, (n) => n is double);
-  display('Is Any Number Decimal?', numbers, [isAnyNumberDecimal]);
+  // bool isAnyNumberDecimal = any(numbers, (n) => n is double);
+  bool isAnyNumberInteger = any(numbers, (n) => n is int);
+  display('Is Any Number Decimal?', numbers, [isAnyNumberInteger]);
 }
 
 explore12() {
