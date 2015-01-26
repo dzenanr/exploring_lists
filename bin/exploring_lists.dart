@@ -20,6 +20,8 @@ part 'sort.dart';
 part 'take.dart';
 part 'where.dart';
 
+// https://news.ycombinator.com/item?id=8943356
+
 var colors = [
               'blue',
               'brown',
