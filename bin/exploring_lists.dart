@@ -20,8 +20,17 @@ part 'sort.dart';
 part 'take.dart';
 part 'where.dart';
 
+// http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 // https://news.ycombinator.com/item?id=8943356
 
+/*
+ * Functional code is characterised by one thing: the absence of side effects. 
+ * It doesn’t rely on data outside the current function, and 
+ * it doesn’t change data that exists outside the current function. 
+ * 
+ * Functional programming is just like imperative programming but without variables 
+ * (except for those passed in as arguments).
+ */
 var colors = [
               'blue',
               'brown',
