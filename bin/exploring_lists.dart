@@ -9,6 +9,7 @@ part 'expand.dart';
 part 'join.dart';
 part 'map.dart';
 part 'max.dart';
+part 'max_length.dart';
 part 'min.dart';
 part 'random.dart';
 part 'fold.dart';
@@ -17,6 +18,7 @@ part 'reversed.dart';
 part 'single.dart';
 part 'skip.dart';
 part 'sort.dart';
+part 'sum.dart';
 part 'take.dart';
 part 'where.dart';
 
@@ -61,8 +63,13 @@ explore01() {
 }
 
 explore02() {
+  num sum = total(numbers);
+  display('Total', numbers, [sum]);
+}
+
+explore02b() {
   num total = sum(numbers);
-  display('Total', numbers, [total]);
+  display('Sum', numbers, [total]);
 }
 
 explore03() {
@@ -78,6 +85,13 @@ explore04() {
 explore05() {
   num maxNumber = max(numbers);
   display('Max Number', numbers, [maxNumber]);
+}
+
+explore05b() {
+  int maxl = maxLength(colors);
+  display('Color Max Length', colors, [maxl]);
+  List maxLengthColors = filter(colors, (c) => c.length == maxl);
+  display('Max Length Colors', colors, maxLengthColors);
 }
 
 explore06() {
@@ -153,9 +167,11 @@ void main() {
   display('Exploring Lists');
   explore01();
   explore02();
+  explore02b();
   explore03();
   explore04();
   explore05();
+  explore05b();
   explore06();
   explore07();
   explore08();
