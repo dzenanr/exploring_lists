@@ -6,6 +6,7 @@ part 'any.dart';
 part 'contains.dart';
 part 'every.dart';
 part 'expand.dart';
+part 'flatten.dart';
 part 'join.dart';
 part 'map.dart';
 part 'max.dart';
@@ -45,13 +46,20 @@ var colors = [
 
 var numbers = [345, 222, 12, 267, 333, 555, 989, 99.99];
 
-display(String title, [List list1, List list2]) {
+var countryCities =
+    [
+     ['Montreal', 'Toronto', 'Vancouver'],
+     ['New York', 'Boston', 'San Francisco'],
+     ['Paris', 'Marseille']
+    ];
+
+display(String title, [List input, List output]) {
   print('========================');
   print(title);
   print('========================');
-  if (list1 != null) {
-    print(list1);
-    print(list2);
+  if (input != null) {
+    print(input);
+    print(output);
     print('------------------------');
   }
   print('');
@@ -163,6 +171,11 @@ explore17() {
   display('Sorted Numbers', numbers, sortedNumbers);
 }
 
+explore18() {
+  List cities = flatten(countryCities);
+  display('Cities', countryCities, cities);
+}
+
 void main() {
   display('Exploring Lists');
   explore01();
@@ -184,4 +197,5 @@ void main() {
   explore15();
   explore16();
   explore17();
+  explore18();
 }
